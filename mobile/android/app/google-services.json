@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "334704564079",
+    "firebase_url": "https://birthright-d8fdf.firebaseio.com",
+    "project_id": "birthright-d8fdf",
+    "storage_bucket": "birthright-d8fdf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334704564079:android:9e2d2f6e63eca52e9ffa9a",
+        "android_client_info": {
+          "package_name": "com.ayolingo.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334704564079-ii0093utd8hq1d4k02o29089snh2h04k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm9ghqq_ViyGe57KN1uL3MnSu38PBMVQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334704564079-4i54vpd3tkfv6cmgarqrkorvet6k48uk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "334704564079-51eqsgeu0lg521h644qdc18jrp3oivi2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.birthrightarmenia.birthbight"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334704564079:android:b0b3cdd32870c40b",
+        "android_client_info": {
+          "package_name": "org.birthrightarmenia.ayolingo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334704564079-la82kdj72fujnajmu2bkglvfiin825oa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.birthrightarmenia.ayolingo",
+            "certificate_hash": "ea087f6e3911e975b40cda88891703c39adb00fd"
+          }
+        },
+        {
+          "client_id": "334704564079-ii0093utd8hq1d4k02o29089snh2h04k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm9ghqq_ViyGe57KN1uL3MnSu38PBMVQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334704564079-4i54vpd3tkfv6cmgarqrkorvet6k48uk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "334704564079-51eqsgeu0lg521h644qdc18jrp3oivi2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.birthrightarmenia.birthbight"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

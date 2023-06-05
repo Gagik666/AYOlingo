@@ -1,0 +1,19 @@
+rootProject.name = 'AYOlingo'
+include ':amazon-cognito-identity-js'
+project(':amazon-cognito-identity-js').projectDir = new File(rootProject.projectDir, '../node_modules/amazon-cognito-identity-js/android')
+include ':react-native-fs'
+project(':react-native-fs').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fs/android')
+include ':react-native-sound'
+project(':react-native-sound').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sound/android')
+include ':rn-fetch-blob'
+project(':rn-fetch-blob').projectDir = new File(rootProject.projectDir, '../node_modules/rn-fetch-blob/android')
+
+apply from: new File(rootProject.projectDir, './../node_modules/expo/scripts/autolinking.gradle');
+useExpoModules()
+
+apply from: new File(rootProject.projectDir, './../node_modules/@react-native-community/cli-platform-android/native_modules.gradle');
+applyNativeModulesSettingsGradle(settings)
+
+include ':app'
+include ':@react-native-firebase_app'
+project(':@react-native-firebase_app').projectDir = new File(rootProject.projectDir, './../node_modules/@react-native-firebase/app/android')

@@ -1,0 +1,21 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "snsTopicArn",
+      "environmentVariableName": "SNS_TOPIC_ARN"
+    },
+    {
+      "cloudFormationParameterName": "sqsQueueUrl",
+      "environmentVariableName": "SQS_QUEUE_URL"
+    },
+    {
+      "cloudFormationParameterName": "appSyncEndpoint",
+      "environmentVariableName": "APP_SYNC_ENDPOINT"
+    },
+    {
+      "cloudFormationParameterName": "appSyncSecretKey",
+      "environmentVariableName": "APP_SYNC_SECRET_KEY"
+    }
+  ]
+}

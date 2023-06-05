@@ -1,0 +1,60 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ayolingo-dev-153620-authRole",
+      "UnauthRoleArn": "arn:aws:iam::913566245914:role/amplify-ayolingo-dev-153620-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::913566245914:role/amplify-ayolingo-dev-153620-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-ayolingo-dev-153620-deployment",
+      "UnauthRoleName": "amplify-ayolingo-dev-153620-unauthRole",
+      "StackName": "amplify-ayolingo-dev-153620",
+      "StackId": "arn:aws:cloudformation:us-east-1:913566245914:stack/amplify-ayolingo-dev-153620/63306630-e305-11eb-af69-0e6b672d4ae7",
+      "AmplifyAppId": "d13jcfxaak7qb7"
+    },
+    "categories": {
+      "function": {
+        "pushNotification": {
+          "deploymentBucketName": "amplify-ayolingo-dev-153620-deployment",
+          "s3Key": "amplify-builds/pushNotification-686176376172394f7a46-build.zip"
+        },
+        "inviteUser": {
+          "deploymentBucketName": "amplify-ayolingo-dev-153620-deployment",
+          "s3Key": "amplify-builds/inviteUser-73442b48365241423952-build.zip"
+        },
+        "notificationsSQSHandler": {
+          "deploymentBucketName": "amplify-ayolingo-dev-153620-deployment",
+          "s3Key": "amplify-builds/notificationsSQSHandler-65365231395541323332-build.zip",
+          "sendPushNotificationEndpoint": "https://1oa0cmev23.execute-api.us-east-1.amazonaws.com/default/pushNotification-dev"
+        },
+        "notificationsSNSHandler": {
+          "deploymentBucketName": "amplify-ayolingo-dev-153620-deployment",
+          "s3Key": "amplify-builds/notificationsSNSHandler-54754d536a6841337a4b-build.zip",
+          "snsTopicArn": "arn:aws:sns:us-east-1:913566245914:notification",
+          "sqsQueueUrl": "https://sqs.us-east-1.amazonaws.com/913566245914/notification.fifo",
+          "appSyncEndpoint": "https://fgojfg67nbdz7petroyjsp5s2y.appsync-api.us-east-1.amazonaws.com/graphql",
+          "appSyncSecretKey": "da2-yuugu3z7jbdc7lmbwsedpbtt3a"
+        },
+        "notificationTrigger": {
+          "snsTopicArn": "arn:aws:sns:us-east-1:913566245914:notification",
+          "deploymentBucketName": "amplify-ayolingo-dev-153620-deployment",
+          "s3Key": "amplify-builds/notificationTrigger-7a61424a6c5a4e6d7367-build.zip"
+        },
+        "moduleTrigger": {
+          "appSyncEndpoint": "https://fgojfg67nbdz7petroyjsp5s2y.appsync-api.us-east-1.amazonaws.com/graphql",
+          "appSyncSecretKey": "da2-yuugu3z7jbdc7lmbwsedpbtt3a",
+          "deploymentBucketName": "amplify-ayolingo-dev-153620-deployment",
+          "s3Key": "amplify-builds/moduleTrigger-3046647857387553564f-build.zip"
+        },
+        "progressTrigger": {
+          "appSyncEndpoint": "https://fgojfg67nbdz7petroyjsp5s2y.appsync-api.us-east-1.amazonaws.com/graphql",
+          "appSyncSecretKey": "da2-yuugu3z7jbdc7lmbwsedpbtt3a",
+          "deploymentBucketName": "amplify-ayolingo-dev-153620-deployment",
+          "s3Key": "amplify-builds/progressTrigger-4b504b59516f7235464b-build.zip"
+        }
+      },
+      "auth": {
+        "ayolingo6c3b7350": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+module.exports.appSyncRequest = require('./appSyncRequest');

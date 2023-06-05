@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>334704564079-51eqsgeu0lg521h644qdc18jrp3oivi2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.334704564079-51eqsgeu0lg521h644qdc18jrp3oivi2</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>334704564079-9t3b9o48a4dt378s31j2h95j8vvfe7kq.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCs_3VJ5AXtRLFowI0fyrV6qNSKLE1iJSY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>334704564079</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.birthrightarmenia.birthbight</string>
+	<key>PROJECT_ID</key>
+	<string>birthright-d8fdf</string>
+	<key>STORAGE_BUCKET</key>
+	<string>birthright-d8fdf.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:334704564079:ios:dc46d32694b6e003</string>
+	<key>DATABASE_URL</key>
+	<string>https://birthright-d8fdf.firebaseio.com</string>
+</dict>
+</plist>

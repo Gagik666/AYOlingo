@@ -1,0 +1,8 @@
+export { default as ValidateEmail } from './validateEmail'
+export { default as usePlayAudio } from './usePlayAudio'
+export { default as IsJsonString } from './isJsonString'
+export { default as getModulePercent } from './getModulePercent'
+export { default as useSetKeyOnExercises } from './useSetKeyOnExercises'
+export { default as useCacheAudios } from './useCacheAudios'
+export { default as getAudiosArrayFromExercise } from './getAudiosArrayFromExercise'
+// export { default as RegisterPushNotification } from './registerPushNotification'

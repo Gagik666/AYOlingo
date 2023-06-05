@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "AYOlingo",
+    "scheme": "ayolingo",
+    "slug": "ayolingo",
+    "version": "2.42",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#b869ff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "org.birthrightarmenia.birthbight",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app uses photo library access to allow you to upload avatar",
+        "NSMicrophoneUsageDescription": "This app uses microphone access for practicing your pronunciation"
+      }
+    },
+    "android": {
+      "package": "org.birthrightarmenia.ayolingo",
+      "useNextNotificationsApi": true,
+      "versionCode": 10001129
+    },
+    "web": {
+      "favicon": "./assets/logo.png"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "sendPushNotificationEndpoint",
+      "environmentVariableName": "SEND_PUSH_NOTIFICATION_ENDPOINT"
+    }
+  ]
+}

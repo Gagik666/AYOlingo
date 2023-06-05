@@ -1,0 +1,13 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "appSyncEndpoint",
+      "environmentVariableName": "APP_SYNC_ENDPOINT"
+    },
+    {
+      "cloudFormationParameterName": "appSyncSecretKey",
+      "environmentVariableName": "APP_SYNC_SECRET_KEY"
+    }
+  ]
+}

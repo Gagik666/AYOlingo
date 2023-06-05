@@ -1,0 +1,240 @@
+type User
+  @key(name: "usersByEmail", fields: ["email"], queryField: "usersByEmail")
+  @key(name: "usersByFirstName", fields: ["type", "firstName"], queryField: "usersByFirstName")
+  @key(name: "usersByLastName", fields: ["type", "lastName"], queryField: "usersByLastName")
+  @key(name: "usersByCreatedAt", fields: ["type", "createdAt"], queryField: "usersByCreatedAt")
+  @searchable
+  @model {
+    id: ID!
+    firstName: String
+    type: String
+    lastName: String
+    email: String
+    avatar: String
+    zipCode: Int
+    country: String
+    state: String
+    password: String
+    pushNotificationToken: String
+    passedLessonsCount: Int
+    deletedAt: AWSDateTime
+    createdAt: AWSDateTime
+    updatedAt: AWSDateTime
+}
+
+type PushNotification
+  @key(name: "pushNotificationsByCreatedAt", fields: ["type", "createdAt"], queryField: "pushNotificationsByCreatedAt")
+  @searchable
+  @model {
+  id: ID!
+  type: String
+  title: String
+  body: String
+  status: String
+  createdAt: AWSDateTime
+}
+
+type Feedback
+  @searchable
+  @model {
+  id: ID!
+  type: FeedbackType
+  device: Device
+  _module: ID
+  _exercise: ID
+  lesson: Int
+  exercise: Int
+  user: FeedbackUser
+  createdAt: AWSDateTime
+}
+
+type FeedbackUser {
+  email: String
+  name: String
+  id: ID
+}
+
+type Device {
+  brand: String
+  osVersion: String
+  modelName: String
+}
+
+
+enum FeedbackType {
+  the_audio_is_incorrect
+  the_audio_is_missing
+  my_answer_should_have_been_accepted
+  my_answer_should_have_not_been_accepted
+  a_word_is_missing_in_the_answer_choice
+  the_sentence_has_an_error
+  something_else_is_wrong
+}
+
+type Progress
+  @key(name: "progressesByCreatedAt", fields: ["type", "createdAt"], queryField: "progressesByCreatedAt")
+  @model {
+  id: ID! # will be user ID
+  type: String
+  lastLessonCompletedDate: AWSDateTime
+  dayStreakCounter: Int # 0
+  protectionCount: Int
+  badges: [String]
+  modules: AWSJSON # { [moduleId]: { progress: 1 - 100, regresssionPointsLost: number, lastModuleActivity: Date, lessons: { [lessonId]: Boolean progress }  }
+  deletedAt: AWSDateTime
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type Language @model {
+  id: String! # en ru hy fr gb
+  name: String
+}
+
+type LanguageGroups @model {
+  id: ID!
+  language: String
+  from: String
+  to: String
+}
+
+type Text @model {
+  id: String! # value of text
+  transliteration: String
+  maleAudio: String
+  femaleAudio: String
+}
+
+type TextType{
+  id: String! # value of text
+  transliteration: String
+  audio: String
+}
+
+type Module
+  @key(name: "modulesByCreatedAt", fields: ["type", "createdAt"], queryField: "modulesByCreatedAt")
+  @key(name: "modulesByOrder", fields: ["type", "order"], queryField: "modulesByOrder")
+  @searchable
+  @model {
+  id: ID!
+  name: String
+  _languageGroup: ID
+  order: Int
+  difficulty: Difficulty
+  duration: String
+  image: String
+  regression: Regression
+  position: Int
+  published: Boolean
+  speakerGender: Gender
+  type: String
+  createdAt: AWSDateTime
+}
+
+type Audio
+  @searchable
+  @model {
+  id: String
+  file: String
+  gender: Gender
+  type: String
+}
+
+enum Gender {
+  male
+  female
+}
+
+type Vocabulary
+  @searchable
+  @model {
+  id: ID
+  _languageGroup: ID
+  valueFrom: String
+  transliterationFrom: String
+  audioFrom: String
+  alphabetLetterFrom: String
+  alphabetIndexFrom: Int
+  valueTo: String
+  transliterationTo: String
+  audioTo: String
+  alphabetLetterTo: String
+  alphabetIndexTo: Int
+}
+
+type Alphabet
+  @key(name: "alphabetByLanguageGroup", fields: ["languageGroup"], queryField: "alphabetByLanguageGroup")
+  @model {
+  id: ID!
+  languageGroup: ID
+  letters: [AlphabetLetters]
+}
+
+type AlphabetLetters {
+  from: String
+  fromInfo: String
+  to: String
+  toInfo: String
+  audio: String
+  audioInfo: String
+  pronunciationLetter: String
+  pronunciationText: String
+  order: Int
+}
+
+type Regression {
+  start: Int
+  lastPoint: Float
+  step: Float
+}
+
+enum Difficulty {
+  intermediate
+  beginner
+  advanced
+}
+
+type Exercises
+  @key(name: "exercisesBySearch", fields: ["search"], queryField: "exercisesBySearch")
+  @key(name: "exercisesByModule", fields: ["module"], queryField: "exercisesByModule")
+  @searchable
+  @model {
+  id: ID!
+  _module: ID
+  module: ID
+  search: String
+  _languageGroup: ID
+  published: Boolean
+  lessonsCount: Int
+  lessons: [Lesson] # ordered
+}
+
+type Lesson {
+  exercises: [Exercise]
+}
+
+enum ExerciseType {
+  fill_in_the_blank
+  match_these_translations
+  select_translation
+  translate_this_phrase
+  match_these_pairs
+}
+
+type Exercise {
+  type: ExerciseType
+  quiz: [Quiz] # ordered
+}
+
+type Quiz {
+  question: TextType
+  answers: [Answer] # should be ordered!
+}
+
+type Answer {
+  value: TextType
+  selected: Boolean
+  right: Boolean
+  image: String
+}
+
